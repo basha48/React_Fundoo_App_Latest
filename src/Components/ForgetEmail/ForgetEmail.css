@@ -1,0 +1,92 @@
+.centerContent{
+    flex: 1 1 100%;
+    box-sizing: border-box;
+    max-width: 40%;
+}
+
+.mainContent{
+    flex-direction: column;
+    box-sizing: border-box;
+    display: flex;
+
+}
+
+.topContent{
+    margin-bottom: 5%;
+    flex: 1 1 100%;
+    box-sizing: border-box;
+    max-height: 5%;
+
+}
+.subContent{
+    margin-bottom: 5%;
+    flex-direction: row;
+    box-sizing: border-box;
+    display: flex;
+    flex: 1 1 1e-9px;
+}
+.leftContent{
+    flex: 1 1 0%;
+    box-sizing: border-box;
+}
+.centerContent{
+    flex: 1 1 100%;
+    box-sizing: border-box;
+    /* max-width: 60%; */
+
+}
+.rightContent{
+    flex: 1 1 0%;
+    box-sizing: border-box;
+}
+
+.Hearder{
+text-align: center;
+color: blue;
+
+}
+.paragraphContent{
+    text-align: center;
+
+}
+
+.subParagraphContent{
+    text-align: center;
+}
+
+/* .emailContent{
+    width: 100%;
+}
+#Email{
+    width: 100%;
+} */
+
+#email_button{
+    float: right;
+    
+}
+.BackButton{
+    color: blue;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 600px) {
+
+   .subContent{
+       display: block;
+   }
+   .centerContent{
+       display: block;
+       max-width: 100%;
+   }
+   .form{
+       border:none;
+       border-radius: none;
+       box-shadow: none;
+   }
+  }
+
+
+  #Email_id-helper-text{
+      color: red;
+  }
