@@ -53,7 +53,7 @@ export const ResetService = (Data) => {
 
 
 
-export const ResetPasswordService = (Data,token) => {
+export const ResetPasswordService = (Data,token) => { 
 
     try{
       const response =  axios.post(`http://fundoonotes.incubation.bridgelabz.com/api/user/reset-password?access_token=`+token,Data)

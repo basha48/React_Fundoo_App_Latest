@@ -22,7 +22,9 @@ import { IconButton,Snackbar } from '@mui/material'
         //this.handleMouseDownPassword = this.handleMouseDownPassword.bind(this);
         this.state = {
           passwordError: "",
+          conformPasswordError:"",
           password : "",
+          confirmPassword :"",
           showPassword :false
         }
       }
@@ -37,8 +39,14 @@ import { IconButton,Snackbar } from '@mui/material'
       }
 
       passwordHandler =  (event)=>{
+
+        let id =  event.target.id;
+          if(id==="password_id"){
+
+          
           let password =  event.target.value;
-          let regexpassword =   new RegExp('[A-Z a-z 0-9]*');
+
+          let regexpassword =   new RegExp('[^\\@\\$\\%\\&\\*][0-9 A-Z a-z]+');
           if(!regexpassword.test(password)){
             this.setState(
               {
@@ -55,6 +63,29 @@ import { IconButton,Snackbar } from '@mui/material'
             )
               }
       }
+else if(id==="conform_Password_id"){
+  let password =  event.target.value;
+
+          let regexpassword =   new RegExp('[^\\@\\$\\%\\&\\*][0-9 A-Z a-z]+');
+          if(!regexpassword.test(password)){
+            this.setState(
+              {
+                conformPasswordError : "password is incorrect"
+              }
+          ) 
+          }
+          else{
+            this.setState(
+                {
+                  confirmPassword :event.target.value,
+                  conformPasswordError : ""
+                }
+            )
+              }
+
+}
+
+    }
 
       handleClickShowPassword = () => {
         console.log("hello world");
@@ -70,11 +101,20 @@ import { IconButton,Snackbar } from '@mui/material'
       };
       
  submitHandler = async ()=>{
+    let fundooPassword = this.state.password;
+    let fundoConfirmPassword = this.state.confirmPassword;
 
-
+    if(fundooPassword!= fundoConfirmPassword){
+      this.setState({
+        SnackbarOpen : true,
+        SnackbarMessage : "password and confirm password not match"
+      })
+        return;
+    }
+    else{
   let data = {
     newPassword :this.state.password
-}
+    }
 
  let token = this.props.match.params.id;
 console.log(token);
@@ -97,6 +137,7 @@ console.log(token);
       SnackbarMessage : error.message
     })
   });
+}
 }
 
     render() {
@@ -125,7 +166,7 @@ console.log(token);
 
                                     </div>
                                     <div className="Conform_password">
-                                    <TextField  type="password" id="conform_Password_id" variant="standard" placeholder='conform password'  fullWidth required/>
+                                    <TextField  type="password" id="conform_Password_id" variant="standard" placeholder='conform password' onChange={this.passwordHandler} helperText={this.state.conformPasswordError} fullWidth required/>
                                     </div>
                                     <div className="bottomContent">
                                     <Button className="txtbtn" onClick={() =>this.submitHandler()} variant="contained">submit</Button>

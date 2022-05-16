@@ -94,6 +94,7 @@ class Login extends Component {
       let messaage = "";
       if (res.status == 200) {
         messaage = "login sucessfull"
+        this.props.history.push('/home');
       }
 
       console.log('res', res);
