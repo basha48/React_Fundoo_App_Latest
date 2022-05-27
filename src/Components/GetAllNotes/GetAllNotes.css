@@ -1,0 +1,48 @@
+.smallCards{
+    margin: 5px;
+    border-radius: 5%;
+    height: min-content;
+    width: 220px;
+    box-shadow: 0 3px 1px -2px rgb(0 0 0 / 20%), 0 2px 2px 0 rgb(0 0 0 / 14%), 0 1px 5px 0 rgb(0 0 0 / 12%);
+    
+}
+.mainSmallCard{
+    place-content: stretch flex-start;
+    align-items: stretch;
+    flex-direction: row;
+    box-sizing: border-box;
+    display: flex;
+    flex: 1 1 500px;
+    max-width: 500px;
+    min-width: 500px;
+    flex-wrap: wrap;
+    margin: 15px 0px 0px 0px;
+
+}
+.spaceSmallCards{
+    width: 20px;
+}
+.cardContainer{
+    place-content: stretch center;
+    align-items: stretch;
+    flex-direction: row;
+    box-sizing: border-box;
+    display: flex;
+}
+.space_for_Small_Cards{
+    height: 10vh;
+
+}
+
+#InputTitle{
+    font-weight: bold;
+    font-size: 18px;
+    color :rgba(0,0,0,.87);
+}
+.Small_Card_icons{
+    cursor: pointer;
+    color: rgba(0,0,0,.87);
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+}

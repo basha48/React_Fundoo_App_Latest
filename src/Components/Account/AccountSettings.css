@@ -1,0 +1,17 @@
+.account_Settings{
+    height: 20vh;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+.signOutButton{
+    font-size: 8px;
+    float: right;
+}
+.main_content{
+    width: 30px;
+    height: 30px;
+    background-color: aqua;
+    border-radius: 50%;
+    
+}

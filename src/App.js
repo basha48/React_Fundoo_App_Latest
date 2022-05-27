@@ -10,6 +10,9 @@ import { BrowserRouter as Router,Switch,Route,withRouter  } from 'react-router-d
 import AppBarHeader from './Components/AppBar/AppBarHeader';
 import PrimarySearchAppBar from './Components/AppBar/AppBarHeader';
 import TempDrawer from './Components/Drawer/TempDrawer';
+import TempgetNotes from './Components/GetAllNotes/TempgetNotes';
+import GetAllNotes from './Components/GetAllNotes/GetAllNotes';
+import Archives from './Components/Archive/Archives';
 
 
 
@@ -22,6 +25,9 @@ function App() {
       <Route exact path="/ForgetEmail"  component={withRouter(ForgetEmail)} />
       <Route  exact path="/resetpassword/:id"   component={ withRouter(ForgetPassword) } />
       <Route  exact path="/home"   component={ withRouter(AppBarHeader) } />
+      <Route  exact path="/notes"   component={ withRouter(TempgetNotes) } />
+      <Route  exact path="/allnotes"   component={ withRouter(GetAllNotes) } />
+      <Route  exact path="/archive"   component={ withRouter(Archives) } />
       {/* <Route  exact path="/Drawer"   component={ withRouter(TempDrawer) } /> */}
     </Switch>
   </Router>

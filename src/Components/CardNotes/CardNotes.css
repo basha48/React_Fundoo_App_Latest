@@ -1,0 +1,24 @@
+.longCard{
+    display: flex;
+    flex-direction: column;
+    height: 150px;
+}
+
+.title_With_icon{
+    display: flex;
+    justify-content: space-between;
+}
+
+.divSpace{
+    height: 20px;
+    
+}
+
+.iconImg{
+    cursor: pointer;
+    display: flex;
+    justify-content: space-evenly;
+}
+#remindIcon{
+    margin-top: -10px;
+}

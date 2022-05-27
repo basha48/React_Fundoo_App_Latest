@@ -1,0 +1,36 @@
+.longCard{
+    display: flex;
+    flex-direction: column;
+    height: 150px;
+}
+#close_button{
+    float: right;
+    color: rgba(0,0,0,.87);;
+    font-family: 'Roboto', sans-serif;
+    text-transform: lowercase;
+}
+.MuiPaper-root MuiPaper-elevation MuiPaper-elevation16 MuiDrawer-paper MuiDrawer-paperAnchorLeft css-4t3x6l-MuiPaper-root-MuiDrawer-paper{
+    top: 56px;
+}
+.iconImg{
+    cursor: pointer;
+    display: flex;
+    justify-content: space-evenly;
+}
+.divSpace{
+    height: 20px;
+    
+}
+#remindIcon{
+    margin-top: -10px;
+}
+.title_With_icon{
+    display: flex;
+    justify-content: space-between;
+}
+.space_in_close{
+    width: 20px;
+}
+#pin{
+    cursor: pointer;
+}

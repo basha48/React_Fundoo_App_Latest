@@ -94,7 +94,12 @@ class Login extends Component {
       let messaage = "";
       if (res.status == 200) {
         messaage = "login sucessfull"
+        localStorage.setItem('token',res.data.id);
+        localStorage.setItem('email',res.data.email);
+        localStorage.setItem('firstName',res.data.firstName);
+        localStorage.setItem('lastName',res.data.lastName);
         this.props.history.push('/home');
+        console.log(res.data.id);
       }
 
       console.log('res', res);

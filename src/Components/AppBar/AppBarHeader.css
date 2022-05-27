@@ -1,5 +1,5 @@
 .navbar{
-    background-color: rgb(25, 118, 210);
+    background-color:  #fb0;
     width: 100%;
     height: 10vh;
 }
@@ -11,6 +11,9 @@
     height: 100%;
     
 }
+.subcontent{
+    width: 100%;
+}
 /* .subcontent{
     flex-direction: column;
     box-sizing: border-box;
@@ -19,7 +22,7 @@
     max-width: 100%;
 } */
 .itemcontent{
-    background-color: rgb(25, 118, 210);
+    background-color:  #fb0;
     margin-bottom: 0.8%;
     flex-direction: row;
     box-sizing: border-box;
@@ -77,6 +80,7 @@
     width: 100px;
 }
 .text_bar{
+    /* padding-left:50px; */
     width:600px;
     background-color: white;
     color:white;
@@ -95,11 +99,56 @@
     display: flex;
     align-items: center;
 }
+
+.text_feild_div{
+width: 300px;
+}
 .space_view{
     width: 10%;
 }
 .space_for_fundoo{
     width: 250px;
+}
+.space_in_menu{
+    width: 25%;
+    height: 50px;
+}
+
+.mainTextBox{
+    width: 40vw;
+}
+
+.space_Content{
+    width: 70px;
+}
+.mainBox{
+    display: flex;
+}
+.spaceInBetween{
+    width: 100%;
+    height: 25px;
+}
+
+.shoppingCart,.viewStream,.Account_Circle{
+    cursor: pointer;
+}
+.mainBox{
+    display: flex;
+    justify-content: center;
+}
+
+@media  only screen and (max-width : 700px) {
+
+    .text_feild_div{
+        width: 230px;
+    }
+}
+
+@media  only screen and (max-width : 500px) {
+
+   .header_title{
+       display: none;
+   }
 }
 
 

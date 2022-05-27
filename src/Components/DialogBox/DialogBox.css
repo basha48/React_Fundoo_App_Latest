@@ -1,0 +1,11 @@
+.DisplayCards{
+    display: flex;
+}
+#closebutton{
+     position: relative;
+     height: 100%;
+    top: 100px;
+    color: rgba(0,0,0,.87);;
+    font-family: 'Roboto', sans-serif;
+    text-transform: lowercase; 
+}
